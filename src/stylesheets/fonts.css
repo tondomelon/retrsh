@@ -1,0 +1,35 @@
+@font-face {
+    font-family: 'CoFo Peshka 750';
+    src: url('../fonts/CoFoPeshka750Trial-750Bold.woff2') format('woff2'),
+        url('../fonts/CoFoPeshka750Trial-750Bold.woff') format('woff'),
+        url('../fonts/CoFoPeshka750-750Bold-Trial.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Numerino_Veneto';
+      src: url('../fonts/Numerino-VenetoStencil.eot');
+    src: url('../fonts/Numerino-VenetoStencil.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Numerino-VenetoStencil.woff2') format('woff2'),
+        url('../fonts/Numerino-VenetoStencil.woff') format('woff'),
+        url('../fonts/Numerino-VenetoStencil.ttf') format('truetype'),
+        url('../fonts/Numerino-VenetoStencil.svg#Numerino-VenetoStencil') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Numerino_Pixel';
+     src: url('../fonts/Numerino-PixelSolid.eot');
+    src: url('../fonts/Numerino-PixelSolid.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Numerino-PixelSolid.woff2') format('woff2'),
+        url('../fonts/Numerino-PixelSolid.woff') format('woff'),
+        url('../fonts/Numerino-PixelSolid.ttf') format('truetype'),
+        url('../fonts/Numerino-PixelSolid.svg#Numerino-PixelSolid') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}

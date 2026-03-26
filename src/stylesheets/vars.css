@@ -1,0 +1,34 @@
+:root {
+  --white: #F6F4E7;
+  --black: #1B4571;
+  --blue: #2547FE;
+  --yellow: #FFE301;
+  --orange: #FF9807;
+  --sky: #56DCE7;
+
+  --text: "Sans-serif", sans-serif;
+  --title: 'CoFo Peshka 750', sans-serif;
+  --num-veneto: 'Numerino_Veneto';
+  --num-pixel: 'Numerino_Pixel';
+
+  --text-size: 18px;
+  --title-size: 24px;
+  --text-lh: 121.4%;
+  --text-block: 24%;
+  --base-text-lh: 142%;
+
+  --title-block-size: 40px;
+  --title-based-size: 36px;
+  --text-styleguide-size: 20px;
+  --text-biggest-size: 60px;
+
+  --header-text-small: 16px;
+  --header-text-big: 20px;
+
+  --title-main-page: 30px;
+  --text-main: 20px;
+  --regular-text: 22px;
+
+  --text-block-width: 310px;
+  --article-block-width: 280px;
+}

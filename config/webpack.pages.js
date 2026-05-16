@@ -9,8 +9,8 @@ function createPages(template, filename, chunks) {
 }
 
 const htmlPages = [
-  createPages('./src/index.html', './index.html', ['index']),
-  createPages('./src/pages/catalog.html', './catalog.html', ['index'])
+  createPages('./src/index.html', './index.html', ['index', 'react']),
+  createPages('./src/pages/catalog.html', './catalog.html', ['index', 'react'])
 ]
 
 module.exports = htmlPages

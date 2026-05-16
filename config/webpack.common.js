@@ -8,7 +8,8 @@ const path = require('path')
 
 module.exports = {
   entry: {
-    index: './src/javascripts/index.js'
+    index: './src/javascripts/index.js',
+    react: './src/javascripts/index.jsx'
   },
   output: {
     filename: '[name].js',

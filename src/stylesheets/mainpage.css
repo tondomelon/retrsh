@@ -195,6 +195,11 @@ h2 {
   margin: 0 auto;
 }
 
+.container_block-one,
+.container_block-two {
+  width: 50%;
+}
+
 .header_text-small {
   font-size: var(--header-text-small);
 }
@@ -202,6 +207,10 @@ h2 {
   font-size: var(--header-text-big);
   font-family: var(--title);
   font-weight: normal;
+}
+.header_text-big a {
+  color: var(--blue);
+  
 }
 
 .header_container ul {

@@ -4,6 +4,9 @@ import { getData } from "../javascripts/airtable";
 import filterback from '../images/catalog_up_bg.png'
 import filterchange from '../images/catalog_up_char1.png'
 
+const imagesContext = require.context('../images/catalog_bgs', false, /\.(png|jpe?g|svg|gif)$/);
+const imagePaths = imagesContext.keys().map(imagesContext);
+
 export default function M_CatalogPreview () {
 
     const [dataPosts, setDataPosts] = useState([])
@@ -17,65 +20,87 @@ export default function M_CatalogPreview () {
     //dataPosts.sort((a,b) => new Date(b.date) - new Date(a.date));
 
     function postPreview () {
+        let count = 0;
         const postPublic = []
         dataPosts.forEach((post) => {
             postPublic.push(post);
         })
-
         if (postPublic.length > 0) {
-            return postPublic.map((post) => (
-                <div key={post.id} class="article" style={{
-                    backgroundImage: `url(${post.backgroud[0].url})`
-                }}>
-                    <div class="description-bg">
-                        <div class="description-content desc-left">
-                            <div class="description sky-bg">
-                                <h2>{post.title}</h2>
-                                <p class="hyphens ">{post.description}</p>
-                            </div>
-                            <div class="article-button">
-                                <a href={post.link} class="to-the-article"><span>К выпуску!</span></a>
-                            </div>
-                        </div>
+            return postPublic.map((post) => {
+                count++;
+                const isEven = count % 2 === 0;
+                return (
+                    <div key={post.id} className={isEven ? 'article art-bg2' : 'article' } style={{
+                            backgroundImage: `url(${imagePaths[count - 1]})`
+                        }}>
+                        {isEven ? (
+                            <>
+                                <div className="article-promo-img promo-left boxShadow_yellow"><img src={post.cover[0].url} /></div>
+                                <div className="description-bg">
+                                    <div className="description-content desc-right">
+                                        <div className="description yellow-bg">
+                                            <h2>{post.title}</h2>
+                                            <p className="hyphens ">{post.description}</p>
+                                        </div>
+                                        <div className="article-button">
+                                        <a href={post.link} className="to-the-article"><span>К выпуску!</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </>
+                        ) : (
+                            <>
+                                <div className="description-bg">
+                                    <div className="description-content desc-left">
+                                        <div className="description sky-bg">
+                                            <h2>{post.title}</h2>
+                                            <p className="hyphens ">{post.description}</p>
+                                        </div>
+                                        <div className="article-button">
+                                            <a href={post.link} className="to-the-article"><span>К выпуску!</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="article-promo-img promo-right boxShadow_sky"><img src={post.cover[0].url} /></div>
+                            </>
+                        )}
                     </div>
-                    <div class="article-promo-img promo-right boxShadow_sky"><img src={post.cover[0].url} /></div>
-                </div>
-            ))
+                );
+            })
         }
     }
     
     return (
         <>
-            <section class="choose-theme">
-                <div class="choose-theme_container">
-                    <h2 class="mainTitle-blue">Выбери свой интерес</h2>
-                    <div class="filter-container">
-                        <div class="filter-container-edit"> <span class="music">музыка</span></div>
-                        <div class="filter-container-edit filter-container-editRight"><span class="games">игры</span></div>
-                        <div class="filter-container-edit"><span class="stars">звезды</span></div>
-                        <div class="filter-container-edit filter-container-editRight"><span class="creativity">творчество</span></div>
+            <section className="choose-theme">
+                <div className="choose-theme_container">
+                    <h2 className="mainTitle-blue">Выбери свой интерес</h2>
+                    <div className="filter-container">
+                        <div className="filter-container-edit"> <span className="music">музыка</span></div>
+                        <div className="filter-container-edit filter-container-editRight"><span className="games">игры</span></div>
+                        <div className="filter-container-edit"><span className="stars">звезды</span></div>
+                        <div className="filter-container-edit filter-container-editRight"><span className="creativity">творчество</span></div>
                     </div>
                 </div>
-                <div class="catalog_up_bg-img"><img src={filterback} /></div>
-                <div class="catalog_up_change-img"><img src={filterchange} /></div>
+                <div className="catalog_up_bg-img"><img src={filterback} /></div>
+                <div className="catalog_up_change-img"><img src={filterchange} /></div>
             </section>
-            <section class="filter-catalog">
-                <div class="filter_container">
-
-                    <div class="filter-with"><p>Сортировать по:</p></div>
-                    <div class="filter-wrap">
-                        <div class="filter-active active">
-                            <div class="chooseOne yellow-bg">дата выхода</div>
+            <section className="filter-catalog">
+                <div className="filter_container">
+                    <div className="filter-with"><p>Сортировать по:</p></div>
+                    <div className="filter-wrap">
+                        <div className="filter-active active">
+                            <div className="chooseOne yellow-bg">дата выхода</div>
                         </div>
-                        <div class="filter-choose">
-                            <div class="chooseOne yellow-bg">дата выхода</div>
-                            <div class="chooseOne sky-bg">спец-выпуски</div>
-                            <div class="chooseOne orange-bg">популярно</div>
+                        <div className="filter-choose">
+                            <div className="chooseOne yellow-bg">дата выхода</div>
+                            <div className="chooseOne sky-bg">спец-выпуски</div>
+                            <div className="chooseOne orange-bg">популярно</div>
                         </div>
                     </div>
                 </div>
             </section>
-            <section class="articles">
+            <section className="articles">
                 { postPreview() }
             </section>
         </>

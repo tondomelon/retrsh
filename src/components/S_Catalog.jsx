@@ -3,6 +3,7 @@ import React from "react"
 import M_Header from '../components/M_Header.jsx'
 import M_Footer from '../components/M_Footer.jsx'
 import M_CatalogPreview from '../components/M_CatalogPreview.jsx'
+import M_Search from "../components/M_Search.jsx"
 
 export default function S_Catalog (
    {menuLinksLeft, menuLinksRight}
@@ -10,6 +11,7 @@ export default function S_Catalog (
     return (
         <>
             <M_Header menuLinksLeft={menuLinksLeft} menuLinksRight={menuLinksRight} />
+            <M_Search />
             <main>
                 <M_CatalogPreview />
             </main>

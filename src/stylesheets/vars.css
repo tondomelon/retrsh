@@ -10,6 +10,7 @@
   --title: 'CoFo Peshka 750', sans-serif;
   --num-veneto: 'Numerino_Veneto';
   --num-pixel: 'Numerino_Pixel';
+  --title-itallic: 'CoFo Peshka Slanted', sans-serif;
 
   --text-size: 18px;
   --title-size: 24px;
@@ -31,4 +32,7 @@
 
   --text-block-width: 310px;
   --article-block-width: 280px;
+
+  --text-itallic-title: 20px;
+
 }

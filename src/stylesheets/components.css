@@ -1,0 +1,240 @@
+/* BUTTONS */
+
+/*<button class="white-button" type="submit">
+                <span>Найти</span>
+              </button> */
+
+.white-button {
+height: 48px;
+display: inline-block;
+text-decoration: none;
+}
+.white-button span {
+color: var(--blue);
+font-size: var(--text-size);
+font-family: var(--title);
+padding: 10px;
+display: inline-block;
+transition: all 0.2s;
+border: 1px solid var(--blue);
+border-bottom: 4px solid var(--blue);
+background-color: var(--white);
+text-align: center;
+}
+.white-button:hover span {
+background-color: var(--blue);
+color: var(--white);
+border-bottom: 0;
+margin-top: 4px;
+}
+
+.blue_button {
+  height: 47px;
+  display: inline-block;
+  text-decoration: none;
+}
+.blue_button span{
+  color: var(--blue);
+  font-size: var(--text-size);
+  font-family: var(--title);
+  padding: 10px;
+  display: inline-block;
+  transition: all 0.2s;
+  border-bottom: 4px solid var(--blue);
+  background-color: var(--sky);
+}
+.blue_button:hover span{
+  background-color: var(--blue);
+  color: var(--sky);
+  border-bottom: 0;
+  margin-top: 4px;
+}
+
+
+
+/* ELEMENTS */
+
+.star {
+  position: absolute;
+  z-index: -1;
+  width: 530px;
+}
+
+
+
+/*. COLORS */
+
+.orange {
+  color: var(--orange);
+}
+.orange-bg {
+  background-color: var(--orange);
+}
+.white {
+  color: var(--white);
+}
+.white-bg {
+  background-color: var(--white);
+}
+.sky {
+  color: var(--sky);
+}
+.sky-bg {
+  background-color: var(--sky);
+}
+.yellow {
+  color: var(--yellow);
+}
+.yellow-bg {
+  background-color: var(--yellow);
+}
+.blue {
+  color: var(--blue);
+}
+.blue-bg {
+  background-color: var(--blue);
+}
+
+
+
+/* TEXT EDIT */
+
+.display_inline_block {
+  display: inline-block;
+}
+.hyphens {
+  text-align: justify;
+  hyphens: auto;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+
+/* FEATURES EDIT */
+
+.cursor-pointer {
+    cursor: pointer;
+} 
+
+
+
+/* ---------------------------------------------- */
+/* BLOCKS */
+
+.title-banner {
+    position: relative;
+    margin-bottom: 52px;
+}
+
+.title-banner h2 {
+    position: relative;
+    z-index: 2;
+    font-size: var(--title-block-size);
+    padding: 12px 10px;
+}
+
+.title-banner::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: var(--blue);
+    transform: rotate(-1.8deg) scale(1.03);
+    z-index: 1;
+}
+
+
+.intro-text {
+    max-width: 380px;
+}
+.intro-text p {
+    font-size:  var(--regular-text);
+}
+
+
+.text-block_w-color h2 {
+  font-size: var(--title-main-page);
+  padding: 2px;
+  margin-bottom: 6px;
+}
+.text-block_w-color p {
+  max-width: 368px;
+  font-size: var(--text-size);
+  padding: 4px 4px 8px 4px;
+}
+
+
+.two-text-block h2 {
+  font-size: var(--title-main-page);
+  padding: 2px;
+  margin-bottom: 6px;
+}
+.two-text-block div {
+  display: flex;
+  justify-content: start;
+  gap: 90px;
+}
+.two-text-block p {
+  max-width: 290px;
+  font-size: var(--text-size);
+}
+
+.typical-text-block {
+
+}
+
+
+.typical-text-block_title-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+}
+.typical-text-block_title-container h2 {
+  font-size: var(--title-main-page);
+  padding: 2px;
+}
+.typical-text-block_title-container {
+  margin-bottom: 6px;
+}
+.typical-text-block p {
+  max-width: 368px;
+  font-size: var(--text-size);
+}
+
+
+/* PADDINGS & MARGINS */
+
+.margin_l_40 {
+  margin-left: 40px;
+}
+.margin_l_100 {
+  margin-left: 100px;
+}
+.margin_l_210 {
+  margin-left: 210px;
+}
+
+
+.margin_r_100 {
+  margin-right: 100px;
+}
+
+
+.margin_t_80 {
+  margin-top: 80px;
+}
+.margin_t_240 {
+  margin-top: 240px;
+}
+.margin_t_32 {
+  margin-top: 32px;
+}
+
+
+.padding_t_80 {
+  padding-top: 80px;
+}

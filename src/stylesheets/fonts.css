@@ -9,6 +9,12 @@
 }
 
 @font-face {
+    font-family: 'CoFo Peshka Slanted';
+    src: url('../fonts/CoFoPeshka1000Trial-1000RegularSlanted.woff2') format('woff2'),
+        url('../fonts/CoFoPeshka1000Trial-1000RegularSlanted.woff') format('woff');
+}
+
+@font-face {
     font-family: 'Numerino_Veneto';
       src: url('../fonts/Numerino-VenetoStencil.eot');
     src: url('../fonts/Numerino-VenetoStencil.eot?#iefix') format('embedded-opentype'),
@@ -33,3 +39,5 @@
     font-style: normal;
     font-display: swap;
 }
+
+

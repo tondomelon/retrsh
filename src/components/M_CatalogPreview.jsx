@@ -35,7 +35,7 @@ export default function M_CatalogPreview () {
                         }}>
                         {isEven ? (
                             <>
-                                <div className="article-promo-img promo-left boxShadow_yellow"><img src={post.cover[0].url} /></div>
+                                <div className="article-promo-img promo-left"><img src={post.cover[0].url} /></div>
                                 <div className="description-bg">
                                     <div className="description-content desc-right">
                                         <div className="description yellow-bg">
@@ -54,14 +54,14 @@ export default function M_CatalogPreview () {
                                     <div className="description-content desc-left">
                                         <div className="description sky-bg">
                                             <h2>{post.title}</h2>
-                                            <p className="hyphens ">{post.description}</p>
+                                            <p className="hyphens">{post.description}</p>
                                         </div>
                                         <div className="article-button">
                                             <a href={post.link} className="to-the-article"><span>К выпуску!</span></a>
                                         </div>
                                     </div>
                                 </div>
-                                <div className="article-promo-img promo-right boxShadow_sky"><img src={post.cover[0].url} /></div>
+                                <div className="article-promo-img promo-right"><img src={post.cover[0].url} /></div>
                             </>
                         )}
                     </div>

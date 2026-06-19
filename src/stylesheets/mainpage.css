@@ -210,7 +210,7 @@ h2 {
 }
 .header_text-big a {
   color: var(--blue);
-  
+  text-decoration: none;
 }
 
 .header_container ul {
@@ -573,50 +573,28 @@ h2 {
   width: 100%;
 }
 
-.check-out_button {
-  background-color: var(--yellow);
-  width: 283px;
-  height: 140px;
-  transform: rotate(10deg);
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  gap: 10px;
-  position: absolute;
-  right: 284px;
-  bottom: 190px;
+.chek_out-button {
+background-color: var(--yellow);
+width: 283px;
+height: 140px;
+transform: rotate(10deg);
+align-items: center;
+display: flex;
+justify-content: center;
+flex-direction: column;
+gap: 10px;
+position: absolute;
+right: 284px;
+bottom: 190px;
 }
 
-.check-out_button p {
+.chek_out-button p {
   color: var(--blue);
   font-size: var(--text-main);
   font-family: var(--title);
   text-align: center;
 }
-.check-out_button a {
-  height: 47px;
-  display: inline-block;
-  text-decoration: none;
-}
 
-.check-out_button a span {
-  color: var(--blue);
-  font-size: var(--text-size);
-  font-family: var(--title);
-  padding: 10px;
-  display: inline-block;
-  transition: all 0.2s;
-  border-bottom: 4px solid var(--blue);
-  background-color: var(--sky);
-}
-
-.check-out_button a:hover span {
-  background-color: var(--blue);
-  color: var(--sky);
-  border-bottom: 0;
-  margin-top: 4px;
-}
 .after_fresh-releases {
   position: relative;
 }
@@ -642,29 +620,10 @@ h2 {
 .article_text-with-header p {
   margin-top: 4px;
 }
-.hyphens {
-  text-align: justify;
-  hyphens: auto;
-}
 
-.orange {
-  color: var(--orange);
-}
-.orange-bg {
-  background-color: var(--orange);
-}
-.sky {
-  color: var(--sky);
-}
-.sky-bg {
-  background-color: var(--sky);
-}
-.yellow {
-  color: var(--yellow);
-}
-.yellow-bg {
-  background-color: var(--yellow);
-}
+
+
+
 .num-ven {
   font-family: var(--num-veneto);
   font-size: var(--title-based-size);
@@ -1095,17 +1054,6 @@ box-shadow: 40px 40px 0 var(--yellow);
   margin-left: 100px;
 }
 
-/* .to-the-article {
-  color: var(--blue);
-  font-size: var(--text-size);
-  font-family: var(--title);
-  padding: 10px;
-  background-color: var(--white);
-  border: 1px solid var(--blue);
-  display: inline-block;
-  text-decoration: none;
-} */
-
 .to-the-article{
   height: 47px;
   display: inline-block;
@@ -1135,4 +1083,142 @@ box-shadow: 40px 40px 0 var(--yellow);
 
 .article-button {
   text-align: right;
+}
+
+
+.search_random {
+  background-color: var(--sky);
+}
+
+.search_random-container {
+  padding: 10px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.search_stroke {
+  display: flex;
+  align-items: center;
+}
+.search_stroke button {
+  text-decoration: none;
+  all: unset;
+}
+.search_stroke_input {
+  background-color: var(--white);
+  border: solid var(--blue) 1px;
+  padding-left: 10px;
+  min-width: 437px;
+  min-height: 38px;
+  font-family: var(--text);
+  font-size: var( --regular-text);
+  color: var(--black);
+  outline: none;
+}
+
+.search_stroke {
+  gap: 10px;
+}
+
+.cover-img {
+  object-fit: cover;
+  width: 100%;
+}
+
+
+.article_preview {
+  background-color: var(--sky);
+  position: relative;
+  padding: 36px 40px;
+  z-index: 2;
+  overflow: hidden;
+}
+
+.preview-slots_row {
+display: flex;
+justify-content: space-between;
+align-items: flex-start;
+}
+
+.article_preview h2 {
+  font-size: var( --title-block-size);
+}
+
+.card__title {
+  font-family: var(--title);
+  font-size: var(--title-block-size);
+}
+
+.card__subtitle {
+  font-size: var(--text-itallic-title);
+  font-family: 'CoFo Peshka Slanted';
+  padding: 2px 4px;
+}
+
+.card__title span {
+  padding: 4px 4px;
+}
+.card__subtitle span {
+  padding: 8px 4px;
+}
+
+
+article.card__title {
+  display: flex;
+  justify-content: start;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.position_up-right {
+  top: -300px;
+  right: -265px;
+}
+
+.article_preview h2 {
+  margin-bottom: 38px;
+}
+
+.preview-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  row-gap: 48px;
+}
+.item1 {
+  grid-column: 1 / 5;
+}
+.item2 {
+  grid-column: 8 / 13;
+}
+.item3 {
+  grid-column: 3 / 8;
+}
+.item4 {
+  grid-column: 1 / 5;
+}
+.item5 {
+  grid-column: 8 / 13;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: max-content;
+}
+
+.nintendo-history {
+  background-image: url('../images/article_1_content/fusadziro_photo.png');
+  background-repeat: no-repeat;
+    background-position: top right;
+    background-size: 720px auto;
+}
+
+.marginT_title-banner {
+  padding: 45px 0 0 40px;
+}
+
+.past_office-img {
+  width: 554px;
+  height: 432px;
 }

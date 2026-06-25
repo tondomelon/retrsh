@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useMemo } from "react";
 import { getData } from "../javascripts/airtable";
 
 import filterback from '../images/catalog_up_bg.png'
@@ -9,24 +9,49 @@ const imagePaths = imagesContext.keys().map(imagesContext);
 
 export default function M_CatalogPreview () {
 
-    const [dataPosts, setDataPosts] = useState([])
+    //Исходные данные с сервера
+    const [dataPosts, setDataPosts] = useState([]);
 
-    //Данные получили
+    //Состояние фильтра (выбранный порядок)
+    const [sortOrder, setSortOrder] = useState('свежие'); // 'свежие' или 'старые'
+
+    //Состояние для UI фильтра (раскрыто/свёрнуто, выбранная метка и класс)
+    const [isExpanded, setIsExpanded] = useState(false);
+    const [selectedOption, setSelectedOption] = useState({
+        label: 'свежие',
+        bgClass: 'yellow-bg',
+    });
+
+    //Загрузка данных при монтировании
     useEffect(() => {
-        getData().then(setDataPosts)
-    }, [])
+        getData().then(setDataPosts);
+    }, []);
 
-    //Данные отсортировали по дате
-    //dataPosts.sort((a,b) => new Date(b.date) - new Date(a.date));
+    //Вычисляемый отсортированный список (реактивно обновляется)
+    const sortedArticles = useMemo(() => {
+    return [...dataPosts].sort((a, b) => {
+        const dateA = new Date(a.date);
+        const dateB = new Date(b.date);
+        return sortOrder === 'свежие' ? dateB - dateA : dateA - dateB;
+    });
+    }, [dataPosts, sortOrder]);
+
+    //Обработчики
+    const handleToggle = () => {
+        setIsExpanded(!isExpanded);
+    };
+
+    const handleSelect = (label, bgClass) => {
+        setSelectedOption({ label, bgClass });
+        setSortOrder(label);
+        setIsExpanded(false);
+    };
 
     function postPreview () {
         let count = 0;
-        const postPublic = []
-        dataPosts.forEach((post) => {
-            postPublic.push(post);
-        })
-        if (postPublic.length > 0) {
-            return postPublic.map((post) => {
+        if (sortedArticles.length > 0) {
+            console.log(sortedArticles);
+            return sortedArticles.map((post) => {
                 count++;
                 const isEven = count % 2 === 0;
                 return (
@@ -89,14 +114,29 @@ export default function M_CatalogPreview () {
                 <div className="filter_container">
                     <div className="filter-with"><p>Сортировать по:</p></div>
                     <div className="filter-wrap">
-                        <div className="filter-active active">
-                            <div className="chooseOne yellow-bg">дата выхода</div>
+                    <div
+                        className={`filter-active ${!isExpanded ? 'active' : ''}`}
+                        onClick={handleToggle}
+                    >
+                        <div className={`chooseOne ${selectedOption.bgClass}`}>
+                        {selectedOption.label}
                         </div>
-                        <div className="filter-choose">
-                            <div className="chooseOne yellow-bg">дата выхода</div>
-                            <div className="chooseOne sky-bg">спец-выпуски</div>
-                            <div className="chooseOne orange-bg">популярно</div>
+                    </div>
+
+                    <div className={`filter-choose ${isExpanded ? 'active' : ''}`}>
+                        <div
+                        className="chooseOne yellow-bg"
+                        onClick={() => handleSelect('свежие', 'yellow-bg')}
+                        >
+                        свежие
                         </div>
+                        <div
+                        className="chooseOne sky-bg"
+                        onClick={() => handleSelect('старые', 'sky-bg')}
+                        >
+                        старые
+                        </div>
+                    </div>
                     </div>
                 </div>
             </section>

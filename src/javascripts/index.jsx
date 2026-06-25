@@ -27,12 +27,14 @@ const menuLinksRight = [
 
 import S_Main from '../components/S_Main.jsx'
 import S_Catalog from '../components/S_Catalog.jsx'
+import S_Search from '../components/S_Search.jsx'
 import S_Article from '../components/S_Article.jsx'
 
 const routes = {
     '/': S_Main,
     '/index.html': S_Main,
     '/catalog.html': S_Catalog,
+    '/search.html': S_Search,
     '/article_1.html': S_Article,
 }
 

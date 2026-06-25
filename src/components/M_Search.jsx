@@ -11,15 +11,17 @@ export default function M_Search (
               <span>Рандомный выпуск</span>
             </a>
             <div className="search_stroke">
-              <input
-                className="search_stroke_input"
-                type="search"
-                name="q"
-                placeholder="Поиск"
-              />
-              <button className="white-button" type="submit">
-                <span>Найти</span>
-              </button>
+                <form action="search.html">
+                    <input
+                        className="search_stroke_input"
+                        type="search"
+                        name="q"
+                        placeholder="Поиск"
+                    />
+                    <button className="white-button" type="submit">
+                        <span>Найти</span>
+                    </button>
+                </form>
             </div>
           </div>
         </div>

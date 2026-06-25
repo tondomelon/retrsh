@@ -127,3 +127,11 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+button {
+    appearance: none;
+    -webkit-appearance: none;
+
+    border: none;
+    outline: none;
+    box-shadow: none;
+}

@@ -1214,11 +1214,128 @@ article.card__title {
     background-size: 720px auto;
 }
 
-.marginT_title-banner {
-  padding: 45px 0 0 40px;
-}
+
 
 .past_office-img {
   width: 554px;
   height: 432px;
+}
+
+.section2_block img {
+  max-width: 766px;
+  max-height: 100%;
+  margin-left: auto;
+  margin-top: -145px;
+}
+
+.director_core {
+  max-width: 758px;
+  overflow: hidden;
+  margin-left: 4px;
+}
+
+.nintendo-history2 {
+  margin-top: 16px;
+}
+
+.nintendo-history2 {
+  background-image: url("../images/article_1_content/Japan_table.png");
+    background-repeat: no-repeat;
+    background-position: left 76px;
+    background-size: 412px auto;
+}
+
+.marios {
+  margin-top: -264px;
+  max-width: 862px;
+}
+.mario {
+  max-width: 752px;
+  overflow: hidden;
+}
+
+.hollow_knight_banner {
+  max-width: 650px;
+}
+
+.hornet_knight {
+  max-width: 254px;
+  margin-left: -74px;
+}
+
+.mewgenics {
+  max-width: 836px;
+}
+
+
+
+.games-section {
+  background-image: url('../images/article_1_content/ZZZ_bg.png');
+  background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: center bottom;
+    padding-bottom: 330px;
+}
+
+.zenless_promo {
+  max-width: 317px;
+}
+
+.eastward_bg {
+  max-width: 858px;
+  margin-top: -100px;
+}
+
+.eastward_screenshots {
+width: 100%;
+    height: auto;
+    display: block;
+}
+
+.gardenstoru_bg {
+  width: 720px;
+
+}
+
+.garden-story_section {
+  position: relative;
+}
+
+.gs_1 {
+  max-width: 146px;
+  position: absolute;
+  top: 20px;
+  right: 130px;
+}
+.gs_2 {
+  max-width: 120px;
+  position: absolute;
+  top: 300px;
+  right: 26px;
+}
+.gs_3 {
+  max-width: 165px;
+  position: absolute;
+  top: 620px;
+  right: 126px;
+}
+
+.gardenstory_screenshots {
+  width: 100%;
+    height: auto;
+    display: block;
+}
+.deltarune {
+  max-width: 935px;
+  margin-top: 20px;
+}
+.tv_time {
+  max-width: 380px;
+  margin-top: 50px;
+}
+.deltarune_screenshots {
+  width: 100%;
+    height: auto;
+    display: block;
+    margin-top: 20px;
 }

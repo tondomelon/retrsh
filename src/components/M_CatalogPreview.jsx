@@ -68,7 +68,7 @@ export default function M_CatalogPreview () {
                                             <p className="hyphens ">{post.description}</p>
                                         </div>
                                         <div className="article-button">
-                                        <a href={post.link} className="to-the-article"><span>К выпуску!</span></a>
+                                        <a href="./article_1.html" className="to-the-article"><span>К выпуску!</span></a>
                                         </div>
                                     </div>
                                 </div>
@@ -82,7 +82,7 @@ export default function M_CatalogPreview () {
                                             <p className="hyphens">{post.description}</p>
                                         </div>
                                         <div className="article-button">
-                                            <a href={post.link} className="to-the-article"><span>К выпуску!</span></a>
+                                            <a href="./article_1.html" className="to-the-article"><span>К выпуску!</span></a>
                                         </div>
                                     </div>
                                 </div>

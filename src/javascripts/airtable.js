@@ -23,7 +23,8 @@ function getData() {
                         backgroud: item.fields['Background'],
                         color: item.fields['Color'],
                         cover: item.fields['Cover'],
-                        link: '#'
+                        date: item.fields['Date'],
+                        link: item.fields['URL'],
                     })
                 })
 

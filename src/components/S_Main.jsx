@@ -48,7 +48,6 @@ export default function S_Main (
             <div><img className='theme-hover' src={Cover_2}/></div>
             <div><img className='theme-hover' src={Cover_3}/></div>
             <div><img className='theme-hover' src={Cover_4}/></div>
-            <div><img className='theme-hover' src={Cover_4}/></div>
           </div>
         </div>
       </section>
